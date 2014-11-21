@@ -1,0 +1,1 @@
+This example shows off some of the new functionality in SnagIt version 8.1

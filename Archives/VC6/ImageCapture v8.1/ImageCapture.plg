@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ImageCapture - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/ImageCapture.res" /d "NDEBUG" "C:\Documents and Settings\Admin User\Desktop\SnagIt_COM_Server_DocExamples\Samples\VC6\ImageCapture v8.1\ImageCapture.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINU~1\LOCALS~1\Temp\RSP55.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/ImageCapture.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Admin User\Desktop\SnagIt_COM_Server_DocExamples\Samples\VC6\ImageCapture v8.1\ImageCapture.cpp"
+"C:\Documents and Settings\Admin User\Desktop\SnagIt_COM_Server_DocExamples\Samples\VC6\ImageCapture v8.1\ImageCaptureDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINU~1\LOCALS~1\Temp\RSP55.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINU~1\LOCALS~1\Temp\RSP56.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/ImageCapture.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Admin User\Desktop\SnagIt_COM_Server_DocExamples\Samples\VC6\ImageCapture v8.1\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINU~1\LOCALS~1\Temp\RSP56.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/ImageCapture.pdb" /machine:I386 /out:"Release/ImageCapture.exe"  ".\Release\ImageCapture.obj" ".\Release\ImageCaptureDlg.obj" ".\Release\StdAfx.obj" ".\Release\ImageCapture.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ImageCapture.cpp
+ImageCaptureDlg.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4089: all references to "SHELL32.dll" discarded by /OPT:REF
+LINK : warning LNK4089: all references to "comdlg32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+ImageCapture.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>
