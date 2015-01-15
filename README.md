@@ -84,6 +84,23 @@ video captures to the MP4 format using H.264/AAC encoding.
  
 Note: This sample was created using the Snagit 12.2.2 COM interface and was set up to support .NET 4. This sample requires Snagit 11.1.0 or later.
 
+**[PowerShell Samples](PowerShell/) ( PowerShell\ )**
+
+Those are samples that demonstrates how to perform a Snagit COM image or video
+capture using using PowerShell:
+- [Interactive image capture](PowerShell/ImageCapture-Interactive.ps1)
+(ImageCapture-Interactive.ps1) allows you to interactively select the
+input, output, preview (on/off) and file type. It then performs the image
+capture and saves to the TEMP directory when appropriate.
+- [Simple window image capture](PowerShell/ImageCapture-SimpleWnd.ps1)
+(ImageCapture-SimpleWnd.ps1) captures from a window (which you have to
+interactively select). It then saves to file (no preview) as a PNG file
+in the TEMP directory.
+- [Simple window video capture](PowerShell/VideoCapture-SimpleWnd-10sec.ps1)
+(VideoCapture-SimpleWnd-10sec.ps1) captures from a window (which you have
+to interactively select) and send the video to Snagit Editor. It is set up
+to include the cursor in the recording, and record for 10 seconds.
+
 **[Ruby Image Capture Sample](Ruby/ImageCaptureRubyScript.rb) ( Ruby\ImageCaptureRubyScript.rb )**
 
 This is a sample Ruby script that demonstrates how to
