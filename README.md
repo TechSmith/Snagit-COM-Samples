@@ -1,4 +1,7 @@
-﻿## Snagit COM Samples and Documentation ##
+﻿*These samples will currently only work for Snagit 12. Snagit 13 samples are not available yet.*
+==========================================
+
+## Snagit COM Samples and Documentation ##
 
 Using Snagit’s COM Server, you can easily incorporate Snagit’s screen capture functionality into your organization’s proprietary applications. The COM Server lets you customize capture instructions for Snagit, automate the capture process, and programmatically control Snagit’s entire array of image and video capture features from within your own application.
 You can access Snagit’s capture functionality from any programming language that supports COM, including the following:
