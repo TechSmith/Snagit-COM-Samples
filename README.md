@@ -19,7 +19,7 @@ After installing Snagit, the COM server should be registered and ready for use w
 3. Run the following command: `snagit32.exe /register`
 
 ### Documentation ###
-The most recent version of the Snagit COM Server documentation is located in the root of this GitHub repository. For older versions, view the Archives folder.
+The most recent version of the Snagit COM Server documentation is located [here](https://assets.techsmith.com/Docs/pdf-snagit/Snagit-13-COM-Server-Guide.pdf). For older versions, view the Archives folder.
 
 ### Samples Overview ###
 We have two comprehensive samples that demonstrate how to use all of the COM interfaces exposed by Snagit. The remaining samples show the basics for using the Snagit COM interface in various programming languages. The samples are organized by language. For languages supported by Visual Studio, we have provided samples that support 2010 and 2013. For older samples, view the Archives folder.
@@ -35,7 +35,7 @@ Summary:
 * Handling image capture events
 * Setting all input/output/filter options
 
-Note: This sample was created using the Snagit 12.2.2 COM interface. Most
+Note: This sample was updated to use the Snagit 13 COM interface. Most
       of what is shown is backward compatible to Snagit 8.1.0.
 
 **[C# Image Capture Sample](CSharp/Image Capture Samples/Simple/) ( CSharp\Image Capture Samples\Simple\ )**
@@ -47,7 +47,7 @@ the green "Finish" button in the Snagit Editor to prompt the user for
 the name and location to save the capture. It will default to
 the JPEG file type.
  
-Note: This sample was created using the Snagit 12.2.2 COM interface
+Note: This sample was updated to use the Snagit 13 COM interface
       and was set up to support .NET 4.
       This code is backward compatible to Snagit 8.1.0.
 
@@ -117,7 +117,7 @@ Visual FoxPro 9 sample program that uses the
 Snagit COM interface (imported into snagitcom.prg)
 to peform a simple image capture that is previewed
 in Snagit Editor. This sample requires
-Snagit 12.x since the interfaces were imported
+Snagit 13.x since the interfaces were imported
 from that version of Snagit.
 
 **[VBScript Image Capture Sample](VBScript/ExcelVBScript.vbs) ( VBScript\ExcelVBScript.vbs )**
@@ -139,16 +139,6 @@ Snagit COM to perform a window or a region image capture and prompt to save the
 file. It also shows how to include the cursor in the capture and to preview the
 resulting capture in the Snagit Editor.
 Note: This sample requires Snagit 6.2.0 or later.
-
-**[VB.Net Image Capturing Links Sample](VB.NET/ImageCaptureKeepLinks/) ( VB.NET\ImageCaptureKeepLinks\ )**
-
-This is a VB.Net image capture example. It demonstrates the basics of using the 
-Snagit COM to perform a window or a region image capture and prompt to save the
-file. It also shows how to include the cursor in the capture, how to preview the
-resulting capture in the Snagit Editor and how to keep web links. Capture output
-is set to prompt for file name. The file type is defaulted to PNG. If capturing
-links, it defaults to SWF file type.
-Note: This sample requires Snagit 8.1.0 or later.
 
 
 ### Support Information ###
