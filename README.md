@@ -142,7 +142,7 @@ Note: This sample requires Snagit 6.2.0 or later.
 
 
 ### Support Information ###
-You can contact our technical support at this email address: support@techsmith.zendesk.com
+You can contact our technical support at https://support.techsmith.com/.
 
 ### License Information ###
 This software is provided under the MIT License ( http://opensource.org/licenses/MIT )
