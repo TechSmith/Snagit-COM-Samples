@@ -7,6 +7,7 @@ You can access Snagit’s capture functionality from any programming language th
 * C/C++
 * Visual Basic
 * Fox Pro 9
+* Python
 * Ruby
 * VBScript
 
@@ -100,6 +101,12 @@ in the TEMP directory.
 (VideoCapture-SimpleWnd-10sec.ps1) captures from a window (which you have
 to interactively select) and send the video to Snagit Editor. It is set up
 to include the cursor in the recording, and record for 10 seconds.
+
+**[Python Image Capture Sample](Python/basicimagecapture.py) ( Python\basicimagecapture.py )**
+
+This is a sample Python script that demonstrates how to
+perform a Snagit COM image capture and save it to a file.
+It will default to the PNG file type. 
 
 **[Ruby Image Capture Sample](Ruby/ImageCaptureRubyScript.rb) ( Ruby\ImageCaptureRubyScript.rb )**
 
