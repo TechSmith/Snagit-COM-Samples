@@ -104,7 +104,7 @@ to include the cursor in the recording, and record for 10 seconds.
 
 **[Python Image Capture Sample](Python/basicimagecapture.py) ( Python\basicimagecapture.py )**
 
-This is a sample Ruby script that demonstrates how to
+This is a sample Python script that demonstrates how to
 perform a Snagit COM image capture and save it to a file.
 It will default to the PNG file type. 
 
