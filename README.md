@@ -19,7 +19,7 @@ After installing Snagit, the COM server should be registered and ready for use w
 3. Run the following command: `snagit32.exe /register`
 
 ### Documentation ###
-The most recent version of the Snagit COM Server documentation is located [here](https://assets.techsmith.com/Docs/Snagit-2020-COM-Server-Guide.pdf). For older versions, view the Archives folder.
+The most recent version of the Snagit COM Server documentation is located [here](https://assets.techsmith.com/Docs/Snagit-2022-COM-Server-Guide.pdf). For older versions, view the Archives folder.
 
 ### Samples Overview ###
 We have two comprehensive samples that demonstrate how to use all of the COM interfaces exposed by Snagit. The remaining samples show the basics for using the Snagit COM interface in various programming languages. The samples are organized by language. For languages supported by Visual Studio, we have provided samples that support 2010 and 2013. For older samples, view the Archives folder.
