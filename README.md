@@ -15,17 +15,17 @@ You can access Snagit’s capture functionality from any programming language th
 After installing Snagit, the COM server should be registered and ready for use with your application. If the COM server is not running, you can re-register the COM server by completing the following:  
 
 1. Open Windows Command Prompt with Administrator privileges.
-2. Navigate to the location where Snagit32.exe is installed.
-3. Run the following command: `snagit32.exe /register`
+2. Navigate to the location where SnagitCapture.exe is installed.
+3. Run the following command: `SnagitCapture.exe /register`
 
 ### Documentation ###
-The most recent version of the Snagit COM Server documentation is located [here](https://assets.techsmith.com/Docs/Snagit-2022-COM-Server-Guide.pdf). For older versions, view the Archives folder.
+The most recent version of the Snagit COM Server documentation is located [here](https://assets.techsmith.com/Docs/Snagit-2025-COM-Server-Guide.pdf). For older versions, view the Archives folder.
 
 ### Samples Overview ###
 We have two comprehensive samples that demonstrate how to use all of the COM interfaces exposed by Snagit. The remaining samples show the basics for using the Snagit COM interface in various programming languages. The samples are organized by language. For languages supported by Visual Studio, we have provided samples that support 2010 and 2013. For older samples, view the Archives folder.
 
-###Description of Samples###
-**[C# Image Capture Sample](CSharp/Image Capture Samples/Comprehensive/) ( CSharp\Image Capture Samples\Comprehensive)**
+### Description of Samples ###
+**[C# Image Capture Sample](CSharp/Image%20Capture%20Samples/Comprehensive)**
 
 This is a comprehensive C# sample application to demonstrate the use of the Snagit
 COM interface for image capture. It covers every option exposed to COM by Snagit,
@@ -38,7 +38,7 @@ Summary:
 Note: This sample was updated to use the Snagit 13 COM interface. Most
       of what is shown is backward compatible to Snagit 8.1.0.
 
-**[C# Image Capture Sample](CSharp/Image Capture Samples/Simple/) ( CSharp\Image Capture Samples\Simple\ )**
+**[C# Image Capture Sample](CSharp/Image%20Capture%20Samples/Simple/)**
 
 This is a simple C# sample application to demonstrate how to
 perform a Snagit COM image capture and save it to a file.
@@ -51,7 +51,7 @@ Note: This sample was updated to use the Snagit 13 COM interface
       and was set up to support .NET 4.
       This code is backward compatible to Snagit 8.1.0.
 
-**[C# Video Capture Sample](CSharp/Video Capture Samples/Comprehensive) ( CSharp\Video Capture Samples\Comprehensive\ )**
+**[C# Video Capture Sample](CSharp/Video%20Capture%20Samples/Comprehensive)**
 
 This is a comprehensive C# sample application to demonstrate the use of the Snagit
 COM interface for recording video. It covers every option for recording
@@ -73,7 +73,7 @@ Summary:
 ````
 Note: This sample requires Snagit 11.1.0 or later.
 
-**[C# Video Capture Sample](CSharp/Video Capture Samples/Simple/) ( CSharp\Video Capture Samples\Simple\ )**
+**[C# Video Capture Sample](CSharp/Video%20Capture%20Samples/Simple/)**
 
 This is a simple C# sample application to demonstrate how to
 perform a Snagit COM video capture and save it to a file.
@@ -84,7 +84,7 @@ video captures to the MP4 format using H.264/AAC encoding.
  
 Note: This sample was created using the Snagit 12.2.2 COM interface and was set up to support .NET 4. This sample requires Snagit 11.1.0 or later.
 
-**[PowerShell Samples](PowerShell/) ( PowerShell\ )**
+**[PowerShell Samples](PowerShell/)**
 
 Those are samples that demonstrates how to perform a Snagit COM image or video
 capture using using PowerShell:
@@ -101,7 +101,7 @@ in the TEMP directory.
 to interactively select) and send the video to Snagit Editor. It is set up
 to include the cursor in the recording, and record for 10 seconds.
 
-**[Ruby Image Capture Sample](Ruby/ImageCaptureRubyScript.rb) ( Ruby\ImageCaptureRubyScript.rb )**
+**[Ruby Image Capture Sample](Ruby/ImageCaptureRubyScript.rb)**
 
 This is a sample Ruby script that demonstrates how to
 perform a Snagit COM image capture and save it to a file.
@@ -111,7 +111,7 @@ the green "Finish" button in the Snagit Editor to prompt the user for
 the name and location to save the capture. It will default to
 the PNG file type. 
 
-**[Visual FoxPro 9 Image Capture Sample](VFoxPro9) ( VFoxPro9\main.prg )**
+**[Visual FoxPro 9 Image Capture Sample](VFoxPro9)**
 
 Visual FoxPro 9 sample program that uses the
 Snagit COM interface (imported into snagitcom.prg)
@@ -120,19 +120,19 @@ in Snagit Editor. This sample requires
 Snagit 13.x since the interfaces were imported
 from that version of Snagit.
 
-**[VBScript Image Capture Sample](VBScript/ExcelVBScript.vbs) ( VBScript\ExcelVBScript.vbs )**
+**[VBScript Image Capture Sample](VBScript/ExcelVBScript.vbs)**
 
 This is a VBScript example for triggering a capture from within
 Microsoft Excel 2010 and pasting the resulting capture into the currently selected cell. The file CaptureSample.xlsm demonstrates calling the VBScript.
 Note: This sample requires Snagit 8.1.0 or later.
 
-**[VBScript TWAIN Image Capture Sample](VBScript/TwainToAutoJPEGFile.vbs) ( VBScript\TwainToAutoJPEGFile.vbs )**
+**[VBScript TWAIN Image Capture Sample](VBScript/TwainToAutoJPEGFile.vbs)**
 
 This is a VBScript example to show how to capture from a TWAIN device
 and output to a JPEG file.
 Note: This sample requires Snagit 8.1.0 or later.
 
-**[VB.Net Basic Image Capture Sample](VB.NET/BasicImageCapture/) ( VB.NET\BasicImageCapture\ )**
+**[VB.Net Basic Image Capture Sample](VB.NET/BasicImageCapture/)**
 
 This is a VB.Net image capture example. It demonstrates the basics of using the 
 Snagit COM to perform a window or a region image capture and prompt to save the
@@ -145,7 +145,7 @@ Note: This sample requires Snagit 6.2.0 or later.
 You can contact our technical support at https://support.techsmith.com/.
 
 ### License Information ###
-This software is provided under the MIT License ( http://opensource.org/licenses/MIT )
+This software is provided under the [MIT License](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2014 TechSmith Corporation
 
