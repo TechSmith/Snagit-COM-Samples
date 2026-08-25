@@ -40,7 +40,6 @@ Const siiClipboard = 7
 Const siiMenu = 9
 Const siiObject = 10
 Const siiFreehand = 12
-Const siiCustomScroll = 18
 Const siiTWAIN = 19
 Const siiExtendedWindow = 23
 Const siiCapture = 25         'Use Snagit's default All-in-One selection UI (requires Snagit 9.0 or later)

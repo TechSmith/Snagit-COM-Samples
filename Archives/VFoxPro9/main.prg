@@ -37,8 +37,7 @@ CLEAR ALL
 #DEFINE siiClipboard	   7	
 #DEFINE siiMenu	           9	
 #DEFINE siiObject	      10	
-#DEFINE siiFreehand	      12	
-#DEFINE siiCustomScroll	  18	
+#DEFINE siiFreehand	      12		
 #DEFINE siiTWAIN	      19	
 #DEFINE siiExtendedWindow 23	
 #DEFINE siiCapture	      25	
@@ -88,7 +87,6 @@ CLEAR ALL
 #DEFINE siftCUR	 23	
 #DEFINE siftPDF	 24	
 #DEFINE siftSNAG 25	
-#DEFINE siftSWF	 26	
 #DEFINE siftMHT	 27	
 
 * Image subfile types
@@ -147,7 +145,7 @@ IF TYPE('loSnagIt') == "O"
 ENDIF
  
 loSnagit = CreateObject("SnagIt.ImageCapture")
-loSnagitImgInterface = NEWOBJECT("ImageCapture", "snagitcom.prg") 
+loSnagitImgInterface = NEWOBJECT("ImageCapture", "snagitcom13.prg") 
 
 ***********************************************
 * I don't know how events work in VFP so commenting 
