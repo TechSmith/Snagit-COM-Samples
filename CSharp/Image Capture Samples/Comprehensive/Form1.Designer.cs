@@ -42,10 +42,6 @@
          this.MagnifierChkBx = new System.Windows.Forms.CheckBox();
          this.PreviewChkBx = new System.Windows.Forms.CheckBox();
          this.CursorChkBx = new System.Windows.Forms.CheckBox();
-         this.HotSpotsGroup = new System.Windows.Forms.GroupBox();
-         this.NoHotSpotsRadio = new System.Windows.Forms.RadioButton();
-         this.HotSpotObjsRadio = new System.Windows.Forms.RadioButton();
-         this.HotSpotLinksRadio = new System.Windows.Forms.RadioButton();
          this.CascadedMenusChkBx = new System.Windows.Forms.CheckBox();
          this.MenuBarChkBx = new System.Windows.Forms.CheckBox();
          this.ScrollDelay = new System.Windows.Forms.ComboBox();
@@ -295,7 +291,6 @@
          this.InputGroupBox.SuspendLayout();
          this.DelayGroupBx.SuspendLayout();
          this.MiscOptsGroupBox.SuspendLayout();
-         this.HotSpotsGroup.SuspendLayout();
          this.FiltersGroupBox.SuspendLayout();
          this.tabFilters.SuspendLayout();
          this.tabTrim.SuspendLayout();
@@ -350,9 +345,7 @@
             "Clipboard",
             "Menu",
             "Object",
-            "Custom Scroll",
             "Extended Window",
-            "TWAIN",
             "Graphic File"});
          this.CaptureType.Location = new System.Drawing.Point(19, 19);
          this.CaptureType.Name = "CaptureType";
@@ -367,7 +360,6 @@
          this.InputGroupBox.Controls.Add(this.TwainBttn);
          this.InputGroupBox.Controls.Add(this.DelayGroupBx);
          this.InputGroupBox.Controls.Add(this.MiscOptsGroupBox);
-         this.InputGroupBox.Controls.Add(this.HotSpotsGroup);
          this.InputGroupBox.Controls.Add(this.CascadedMenusChkBx);
          this.InputGroupBox.Controls.Add(this.MenuBarChkBx);
          this.InputGroupBox.Controls.Add(this.ScrollDelay);
@@ -530,50 +522,6 @@
          this.CursorChkBx.Text = "Include cursor";
          this.CursorChkBx.UseVisualStyleBackColor = true;
          // 
-         // HotSpotsGroup
-         // 
-         this.HotSpotsGroup.Controls.Add(this.NoHotSpotsRadio);
-         this.HotSpotsGroup.Controls.Add(this.HotSpotObjsRadio);
-         this.HotSpotsGroup.Controls.Add(this.HotSpotLinksRadio);
-         this.HotSpotsGroup.Location = new System.Drawing.Point(630, 130);
-         this.HotSpotsGroup.Name = "HotSpotsGroup";
-         this.HotSpotsGroup.Size = new System.Drawing.Size(167, 95);
-         this.HotSpotsGroup.TabIndex = 29;
-         this.HotSpotsGroup.TabStop = false;
-         this.HotSpotsGroup.Text = "Keep Links";
-         // 
-         // NoHotSpotsRadio
-         // 
-         this.NoHotSpotsRadio.AutoSize = true;
-         this.NoHotSpotsRadio.Checked = true;
-         this.NoHotSpotsRadio.Location = new System.Drawing.Point(6, 19);
-         this.NoHotSpotsRadio.Name = "NoHotSpotsRadio";
-         this.NoHotSpotsRadio.Size = new System.Drawing.Size(51, 17);
-         this.NoHotSpotsRadio.TabIndex = 2;
-         this.NoHotSpotsRadio.TabStop = true;
-         this.NoHotSpotsRadio.Text = "None";
-         this.NoHotSpotsRadio.UseVisualStyleBackColor = true;
-         // 
-         // HotSpotObjsRadio
-         // 
-         this.HotSpotObjsRadio.AutoSize = true;
-         this.HotSpotObjsRadio.Location = new System.Drawing.Point(6, 65);
-         this.HotSpotObjsRadio.Name = "HotSpotObjsRadio";
-         this.HotSpotObjsRadio.Size = new System.Drawing.Size(118, 17);
-         this.HotSpotObjsRadio.TabIndex = 1;
-         this.HotSpotObjsRadio.Text = "All clickable objects";
-         this.HotSpotObjsRadio.UseVisualStyleBackColor = true;
-         // 
-         // HotSpotLinksRadio
-         // 
-         this.HotSpotLinksRadio.AutoSize = true;
-         this.HotSpotLinksRadio.Location = new System.Drawing.Point(6, 42);
-         this.HotSpotLinksRadio.Name = "HotSpotLinksRadio";
-         this.HotSpotLinksRadio.Size = new System.Drawing.Size(72, 17);
-         this.HotSpotLinksRadio.TabIndex = 0;
-         this.HotSpotLinksRadio.Text = "Links only";
-         this.HotSpotLinksRadio.UseVisualStyleBackColor = true;
-         // 
          // CascadedMenusChkBx
          // 
          this.CascadedMenusChkBx.AutoSize = true;
@@ -723,9 +671,9 @@
          // 
          this.HandleTxtBx.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
          this.HandleTxtBx.Location = new System.Drawing.Point(277, 48);
-         this.HandleTxtBx.MaxLength = 6;
+         this.HandleTxtBx.MaxLength = 16;
          this.HandleTxtBx.Name = "HandleTxtBx";
-         this.HandleTxtBx.Size = new System.Drawing.Size(52, 20);
+         this.HandleTxtBx.Size = new System.Drawing.Size(141, 20);
          this.HandleTxtBx.TabIndex = 9;
          this.HandleTxtBx.WordWrap = false;
          // 
@@ -863,7 +811,7 @@
          this.SelectionType.Items.AddRange(new object[] {
             "Interactive",
             "Active Window",
-            "Window Handle",
+            "Window Handle (Hex)",
             "Point on the Desktop"});
          this.SelectionType.Location = new System.Drawing.Point(195, 19);
          this.SelectionType.Name = "SelectionType";
@@ -1355,7 +1303,7 @@
          // 
          this.WatermarkSizeTxtBx.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
          this.WatermarkSizeTxtBx.Location = new System.Drawing.Point(63, 60);
-         this.WatermarkSizeTxtBx.MaxLength = 2;
+         this.WatermarkSizeTxtBx.MaxLength = 3;
          this.WatermarkSizeTxtBx.Name = "WatermarkSizeTxtBx";
          this.WatermarkSizeTxtBx.Size = new System.Drawing.Size(33, 20);
          this.WatermarkSizeTxtBx.TabIndex = 30;
@@ -1616,7 +1564,6 @@
          this.ColorConvertSelector.Items.AddRange(new object[] {
             "None",
             "Monochrome",
-            "Halftone",
             "Grayscale"});
          this.ColorConvertSelector.Location = new System.Drawing.Point(8, 14);
          this.ColorConvertSelector.Name = "ColorConvertSelector";
@@ -2372,7 +2319,6 @@
             "PSD",
             "RAS",
             "SNAG",
-            "SWF",
             "TGA",
             "TIF",
             "WFX",
@@ -3331,8 +3277,6 @@
          this.DelayGroupBx.PerformLayout();
          this.MiscOptsGroupBox.ResumeLayout(false);
          this.MiscOptsGroupBox.PerformLayout();
-         this.HotSpotsGroup.ResumeLayout(false);
-         this.HotSpotsGroup.PerformLayout();
          this.FiltersGroupBox.ResumeLayout(false);
          this.tabFilters.ResumeLayout(false);
          this.tabTrim.ResumeLayout(false);
@@ -3437,10 +3381,6 @@
       private System.Windows.Forms.CheckBox AutoScrollChkBx;
       private System.Windows.Forms.CheckBox CascadedMenusChkBx;
       private System.Windows.Forms.CheckBox MenuBarChkBx;
-      private System.Windows.Forms.GroupBox HotSpotsGroup;
-      private System.Windows.Forms.RadioButton NoHotSpotsRadio;
-      private System.Windows.Forms.RadioButton HotSpotObjsRadio;
-      private System.Windows.Forms.RadioButton HotSpotLinksRadio;
       private System.Windows.Forms.GroupBox DelayGroupBx;
       private System.Windows.Forms.Label DelayTimeLabel;
       private System.Windows.Forms.TextBox DelaySeconds;

@@ -259,7 +259,7 @@ namespace ImageCaptureSample
                   MagnifierChkBx.Visible = false;
                   break;
                }
-               case "Window Handle":
+               case "Window Handle (Hex)":
                {
                   ShowWindowHandleControls( true );
                   MagnifierChkBx.Visible = false;
@@ -364,6 +364,7 @@ namespace ImageCaptureSample
                MagnifierChkBx.Visible = true;
 
                SnagImg.Input = snagImageInput.siiRegion;
+               SnagImg.InputRegionOptions.SelectionMethod = snagRegionSelectionMethod.srsmInteractive;
                break;
             }
             case "Fixed Region":
@@ -412,22 +413,6 @@ namespace ImageCaptureSample
                ShowExtendedWindowControls();
 
                SnagImg.Input = snagImageInput.siiExtendedWindow;
-               break;
-            }
-            case "Custom Scroll":
-            {
-               HideAllInputControls();
-               ShowAutoScrollControls();
-
-               SnagImg.Input = snagImageInput.siiCustomScroll;
-               break;
-            }
-            case "TWAIN":
-            {
-               HideAllInputControls();
-               ShowTwainControls();
-
-               SnagImg.Input = snagImageInput.siiTWAIN;
                break;
             }
             case "Graphic File":
@@ -692,11 +677,6 @@ namespace ImageCaptureSample
             case "SNAG":
             {
                SnagImg.OutputImageFile.FileType = snagImageFileType.siftSNAG;
-               break;
-            }
-            case "SWF":
-            {
-               SnagImg.OutputImageFile.FileType = snagImageFileType.siftSWF;
                break;
             }
             case "TGA":
@@ -1412,11 +1392,6 @@ namespace ImageCaptureSample
                SnagImg.Filters.ColorConversion.ConversionMethod = snagColorConversionMethod.sccmMonochrome;
                break;
             }
-            case "Halftone":
-            {
-               SnagImg.Filters.ColorConversion.ConversionMethod = snagColorConversionMethod.sccmHalftone;
-               break;
-            }
             case "Grayscale":
             {
                SnagImg.Filters.ColorConversion.ConversionMethod = snagColorConversionMethod.sccmGrayscale;
@@ -1824,9 +1799,6 @@ namespace ImageCaptureSample
          SnagImg.IncludeCursor = CursorChkBx.Checked;
          SnagImg.UseMagnifierWindow = MagnifierChkBx.Checked;
 
-         //Set option to keep links
-         SnagImg.HotspotType = HotSpotObjsRadio.Checked ? snagHotspotType.shtLinksAndControls : HotSpotLinksRadio.Checked ? snagHotspotType.shtLinksOnly : snagHotspotType.shtNone;
-
          //Set capture delay options
          if ( DelayChkBx.Checked )
          {
@@ -1851,10 +1823,13 @@ namespace ImageCaptureSample
 
          #region Set auto scrolling options
          //Only enable auto-scrolling for the supported capture modes
-         AutoScrollChkBx.Checked = SnagImg.Input == snagImageInput.siiCapture ||
-                                   SnagImg.Input == snagImageInput.siiCustomScroll ||
-                                   SnagImg.Input == snagImageInput.siiRegion ||
-                                   SnagImg.Input == snagImageInput.siiWindow;
+         var CanAutoScroll = SnagImg.Input == snagImageInput.siiCapture ||
+                             SnagImg.Input == snagImageInput.siiRegion ||
+                             SnagImg.Input == snagImageInput.siiWindow;
+         if ( !CanAutoScroll && AutoScrollChkBx.Checked )
+         {
+            AutoScrollChkBx.Checked = false;
+         }
 
          if ( AutoScrollChkBx.Checked )
          {
@@ -1865,12 +1840,17 @@ namespace ImageCaptureSample
                   SnagImg.AutoScrollOptions.AutoScrollMethod = snagAutoScrollMethod.sasmBoth;
                   break;
                }
+               case "Vertical":
+               {
+                  SnagImg.AutoScrollOptions.AutoScrollMethod = snagAutoScrollMethod.sasmVertical;
+                  break;
+               }
                case "Horizontal":
                {
                   SnagImg.AutoScrollOptions.AutoScrollMethod = snagAutoScrollMethod.sasmHorizontal;
                   break;
                }
-               default: //Vertical
+               default:
                {
                   SnagImg.AutoScrollOptions.AutoScrollMethod = snagAutoScrollMethod.sasmNone;
                   break;
@@ -1904,7 +1884,6 @@ namespace ImageCaptureSample
             SnagImg.AutoScrollOptions.ForegroundScrollingWindow = ForeGroundChkBx.Checked;
             SnagImg.AutoScrollOptions.Delay = Convert.ToInt16(ScrollDelay.Text);
 
-            //This option appears to be undocumented. I may have missed it :(
             //This used to pertain to the fastest scrolling method where we simply resize the window
             //and take the capture (same as with extended window capture). Now it means that we use
             //vision technology to perform scrolling captures. Setting this option to "false" will
@@ -1927,16 +1906,16 @@ namespace ImageCaptureSample
                   SnagImg.InputWindowOptions.SelectionMethod = snagWindowSelectionMethod.swsmActive;
                   break;
                }
-               case "Window Handle":
+               case "Window Handle (Hex)":
                {
-                  if ( HandleTxtBx.TextLength < 1 || Helpers.ConvertToNumeric( HandleTxtBx.Text ) == 0 )
+                  if ( HandleTxtBx.TextLength < 1 || Helpers.ConvertHexStringToNumeric( HandleTxtBx.Text ) == 0 )
                   {
-                     MessageBox.Show("Please enter a window handle(not in hexadecimal)");
+                     MessageBox.Show("Please enter a window handle (in hexadecimal)");
                      HandleTxtBx.Focus();
                      return false;
                   }
 
-                  SnagImg.InputWindowOptions.Handle = Helpers.ConvertToNumeric( HandleTxtBx.Text );
+                  SnagImg.InputWindowOptions.Handle = Helpers.ConvertHexStringToNumeric( HandleTxtBx.Text );
                   SnagImg.InputWindowOptions.SelectionMethod = snagWindowSelectionMethod.swsmHandle;
                   break;
                }
@@ -1982,6 +1961,8 @@ namespace ImageCaptureSample
                SnagImg.InputRegionOptions.StartX = Helpers.ConvertToNumeric( XOffsetTxtBx.Text );
                SnagImg.InputRegionOptions.StartY = Helpers.ConvertToNumeric( YOffsetTxtBx.Text );
             }
+
+            SnagImg.InputRegionOptions.SelectionMethod = snagRegionSelectionMethod.srsmFixed;
          }
          #endregion
 
@@ -2017,19 +1998,6 @@ namespace ImageCaptureSample
                SnagImg.InputExtendedWindowOptions.Height = Helpers.ConvertToNumeric( HeightTxtBx.Text );
                SnagImg.InputExtendedWindowOptions.Width = Helpers.ConvertToNumeric( WidthTxtBx.Text );
             }
-         }
-         #endregion
-
-         #region Set Twain capture options
-         if ( CaptureType.Text == "TWAIN" )
-         {
-            if ( TwainTxtBx.TextLength < 1 )
-            {
-               MessageBox.Show( "Please select a Twain device" );
-               TwainBttn.Focus();
-               return false;
-            }
-            SnagImg.InputTWAINOptions.Source = TwainTxtBx.Text;
          }
          #endregion
 
@@ -2129,8 +2097,8 @@ namespace ImageCaptureSample
 
                SnagImg.OutputMailOptions.Address = EmailAddrTxtBx.Text;
                SnagImg.OutputMailOptions.Name = EmailNameTxtBx.Text;
-               SnagImg.OutputMailOptions.Subject = EmailMsgTxtBx.Text;
-               SnagImg.OutputMailOptions.MessageText = EmailSubjectTxtBx.Text;
+               SnagImg.OutputMailOptions.Subject = EmailSubjectTxtBx.Text;
+               SnagImg.OutputMailOptions.MessageText = EmailMsgTxtBx.Text;
             }
          }
          #endregion

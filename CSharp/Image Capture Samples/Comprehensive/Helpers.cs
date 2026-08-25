@@ -8,14 +8,39 @@ namespace ImageCaptureSample
    static class Helpers
    {
       //Converts a string to a number. Returns zero upon failure (and possibly on success).
-      public static Int16 ConvertToNumeric( string str )
+      public static Int32 ConvertToNumeric( string str )
       {
-         Int16 number;
+         Int32 number;
 
          try
          {
-            number = Convert.ToInt16( str );
-         } catch
+            number = Convert.ToInt32( str );
+         }
+         catch
+         {
+            number = 0;
+         }
+
+         return number;
+      }
+
+      public static Int32 ConvertHexStringToNumeric( string str )
+      {
+         Int32 number;
+
+         try
+         {
+            // Remove 0x prefix if present
+            if ( str.StartsWith( "0x", StringComparison.OrdinalIgnoreCase ) )
+            {
+               str = str.Substring( 2 );
+            }
+
+            // Parse as unsigned to handle large window handles, then cast to signed
+            UInt32 unsignedValue = UInt32.Parse( str, System.Globalization.NumberStyles.HexNumber );
+            number = unchecked((Int32)unsignedValue);
+         }
+         catch
          {
             number = 0;
          }
