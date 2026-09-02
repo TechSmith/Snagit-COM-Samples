@@ -36,7 +36,6 @@ snagit = WIN32OLE.new('Snagit.ImageCapture')
 # siiMenu = 9
 # siiObject = 10
 # siiFreehand = 12
-# siiCustomScroll = 18
 # siiTWAIN = 19
 # siiExtendedWindow = 23
 # siiCapture = 25  - use the default All-in-One selection UI
@@ -112,7 +111,6 @@ snagit.OutputImageFile.FileNamingMethod= 0
 # siftCUR = 23
 # siftPDF = 24
 # siftSNAG = 25
-# siftSWF = 26
 # siftMHT = 27
 snagit.OutputImageFile.FileType = 5    
 

@@ -1458,6 +1458,14 @@ namespace VideoSample
 
          //Default the output destination folder to the desktop
          FileOutputFolderPath.Text = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
+
+         //Default input to All-in-One
+         snagVideo.Input = SNAGITLib.snagVideoInput.sviCapture;
+         CaptureType.SelectedIndex = 0;
+
+         //Default output to None
+         snagVideo.Output = SNAGITLib.snagVideoOutput.svoNone;
+         OutputSelector.SelectedIndex = 0;
       }
       #endregion
 
@@ -1732,7 +1740,11 @@ namespace VideoSample
                snagVideo.InputRegionOptions.StartX = Convert.ToInt16( StartXPos.Text );
                snagVideo.InputRegionOptions.StartY = Convert.ToInt16( StartYPos.Text );
             }
-         } 
+         }
+         else if ( snagVideo.Input == snagVideoInput.sviRegion )
+         {
+            snagVideo.InputRegionOptions.SelectionMethod = snagRegionSelectionMethod.srsmInteractive;
+         }
          else if ( snagVideo.Input == snagVideoInput.sviWindow && XPos.Visible )
          {
             //Window based on position
@@ -1770,6 +1782,14 @@ namespace VideoSample
 
             snagVideo.InputWindowOptions.Handle = Convert.ToInt32( nHwnd );
             snagVideo.InputWindowOptions.SelectionMethod = snagWindowSelectionMethod.swsmHandle;
+         }
+         else if ( snagVideo.Input == snagVideoInput.sviWindow && WindowInputSelection.Text == "Active Window" )
+         {
+            snagVideo.InputWindowOptions.SelectionMethod = snagWindowSelectionMethod.swsmActive;
+         }
+         else if ( snagVideo.Input == snagVideoInput.sviWindow && WindowInputSelection.Text == "Interactive" )
+         {
+            snagVideo.InputWindowOptions.SelectionMethod = snagWindowSelectionMethod.swsmInteractive;
          }
 
          //Misc options

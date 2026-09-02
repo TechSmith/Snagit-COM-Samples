@@ -6,9 +6,7 @@ You can access Snagit’s capture functionality from any programming language th
 * C#
 * C/C++
 * Visual Basic
-* Fox Pro 9
 * Ruby
-* VBScript
 
 ### Installation Information ###
 
@@ -25,7 +23,7 @@ The most recent version of the Snagit COM Server documentation is located [here]
 We have two comprehensive samples that demonstrate how to use all of the COM interfaces exposed by Snagit. The remaining samples show the basics for using the Snagit COM interface in various programming languages. The samples are organized by language. For languages supported by Visual Studio, we have provided samples that support 2010 and 2013. For older samples, view the Archives folder.
 
 ### Description of Samples ###
-**[C# Image Capture Sample](CSharp/Image%20Capture%20Samples/Comprehensive)**
+**[C# Image Capture Sample](CSharp/Image%20Capture%20Samples/Comprehensive/)**
 
 This is a comprehensive C# sample application to demonstrate the use of the Snagit
 COM interface for image capture. It covers every option exposed to COM by Snagit,
@@ -111,27 +109,6 @@ the green "Finish" button in the Snagit Editor to prompt the user for
 the name and location to save the capture. It will default to
 the PNG file type. 
 
-**[Visual FoxPro 9 Image Capture Sample](VFoxPro9)**
-
-Visual FoxPro 9 sample program that uses the
-Snagit COM interface (imported into snagitcom.prg)
-to peform a simple image capture that is previewed
-in Snagit Editor. This sample requires
-Snagit 13.x since the interfaces were imported
-from that version of Snagit.
-
-**[VBScript Image Capture Sample](VBScript/ExcelVBScript.vbs)**
-
-This is a VBScript example for triggering a capture from within
-Microsoft Excel 2010 and pasting the resulting capture into the currently selected cell. The file CaptureSample.xlsm demonstrates calling the VBScript.
-Note: This sample requires Snagit 8.1.0 or later.
-
-**[VBScript TWAIN Image Capture Sample](VBScript/TwainToAutoJPEGFile.vbs)**
-
-This is a VBScript example to show how to capture from a TWAIN device
-and output to a JPEG file.
-Note: This sample requires Snagit 8.1.0 or later.
-
 **[VB.Net Basic Image Capture Sample](VB.NET/BasicImageCapture/)**
 
 This is a VB.Net image capture example. It demonstrates the basics of using the 
@@ -142,12 +119,12 @@ Note: This sample requires Snagit 6.2.0 or later.
 
 
 ### Support Information ###
-You can contact our technical support at https://support.techsmith.com/.
+You can contact our technical support at this email address: support@techsmith.zendesk.com
 
 ### License Information ###
 This software is provided under the [MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2014 TechSmith Corporation
+Copyright (c) 2026 TechSmith Corporation
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

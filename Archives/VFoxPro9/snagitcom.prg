@@ -1,5 +1,6 @@
 ***********************************************
 * Snagit's IImageCapture2 interface
+*  (imported from Snagit 12)
 *
 * How to import the Snagit COM interfaces:
 * 0) Snagit must be installed on the system first.
